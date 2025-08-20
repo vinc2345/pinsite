@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Copy Site</title>
+  <script>
+    function copyText() {
+      const text = "Halo, ini teks otomatis!";
+      navigator.clipboard.writeText(text).then(() => {
+        alert("✅ Teks berhasil dicopy: " + text);
+      }).catch(err => {
+        alert("❌ Gagal copy: " + err);
+      });
+    }
+
+    // jalankan otomatis saat halaman dibuka
+    window.onload = copyText;
+  </script>
+</head>
+<body>
+  <h2>Website Auto Copy</h2>
+  <p>Begitu halaman ini dibuka, teks otomatis tercopy ke clipboard.</p>
+</body>
+</html>
